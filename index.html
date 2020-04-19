@@ -2,9 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>DOM Traversal</title>
-
-
+<title>Game of Thrones</title>
 </script>
 <link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
 <link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
@@ -12,6 +10,10 @@
 
 <body>
     <main>
+      <section id="title">
+        <h2>Game of Thrones</h2>
+
+      </section>
 
     <section id="imageContainer">
     	<div id="houseImages" style="right: 0"> <!-- add in all of the images to make a scrolling "banner" -->
@@ -21,10 +23,14 @@
     		<img src="images/tully.jpg"/>
     		<img src="images/greyjoy.jpg"/>
     		<img src="images/arryn.jpg"/>
+        <img src="images/targeryen.jpg"/>
+        <img src="images/frey.jpg" />
+        <img src="images/tyrell.jpg" />
         </div>
     </section>
 
     <nav id="bottomNav">
+      <h2 class="hidden">House Sigils</h2>
     	<ul id="navList">
         	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
             <li><div class="sigilContainer stark" data-offset="0"></div></li>
@@ -33,32 +39,48 @@
             <li><div class="sigilContainer tully" data-offset="3"></div></li>
             <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
             <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+            <li><div class="sigilContainer targeryen" data-offset="6"></div></li>
+            <li><div class="sigilContainer frey" data-offset="7"></div></li>
+            <li><div class="sigilContainer tyrell" data-offset="8"></div></li>
         </ul>
     </nav>
 
-    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+    <h1>Nine House. One throne</h1><!-- replace this with the house name -->
 
-    <p class="house-info"></p><!-- replace this with house details (github gist) -->
+    <p class="house-info">Click to get more information about the Game of Thrones Houses.</p><!-- replace this with house details (github gist) -->
 </main>  <!--end mainContainer-->
 
 
 <!-- put our lightbox on the top of the stack -->
 <section class="lightbox">
+  <h2 class="hidden">House Video LightBox</h2>
   <span class="close-button">X</span>
 
   <video src="video/House-Stark.mp4"></video>
+  <!-- Control buttons-->
   <div class="vid-controls">
     <span class="play-button">
-      <button>Pause</button>
+      <button id="rewind">Rewind</button>
     </span>
     <span class="play-button">
-      <button>Rewind</button>
+      <button id="pause-play">Pause</button>
+      <input type="range" id="timeBar" value="0">
+    </span>
+
+    <span class="play-button">
+      <button id="mute">Mute</button>
+      <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="0">
+    </span>
+    <span class="play-button">
+      <button id="fullScreen">Full Screen</button>
     </span>
 
   </div>
 
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js">
 
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
