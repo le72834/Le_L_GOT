@@ -10,6 +10,9 @@
 /* ----- end custom font ----- */
 
 /* ----- default styles ----- */
+.hidden {
+  display: none;
+}
 body { background-image:url(../images/grungeBG.jpg);
 	background-repeat:no-repeat; background-position:center center;
 	background-color:#000000; font-size:16px; }
@@ -20,7 +23,12 @@ h1 {
 	margin-top:30px;
 	font-size:1.25em;
 }
-
+h2 {
+  font-family: 'GOT_font';
+	color:white;
+  margin-bottom: 20px;
+	font-size:2em;
+}
 main {
 	position:relative;
 	width:100%;
@@ -36,7 +44,7 @@ main {
 	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
+#houseImages { position:relative; width:5500px; transition: all 1.5s; }
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -56,7 +64,7 @@ main {
 	height:54px;
 	display:inline-block;
 	overflow:hidden;
-	background-image:url(../images/GOT_sprites.png);
+	background-image:url(../images/GOT_sprites2.png);
 	background-repeat:no-repeat;
 	transition:transform .3s;
 	-webkit-transition:-webkit-transform .3s;
@@ -66,20 +74,29 @@ main {
 .stark { background-position:0px -54px; }
 .stark:hover { background-position:0px 0px; }
 
-.baratheon { background-position:-50.5px -54px; }
-.baratheon:hover { background-position:-51px 0px; }
+.baratheon { background-position:-52px -54px; }
+.baratheon:hover { background-position:-52px 0px; }
 
-.lannister { background-position:-101px -54px; }
-.lannister:hover { background-position:-101px 0px; }
+.lannister { background-position:-103px -54px; }
+.lannister:hover { background-position:-103px 0px; }
 
-.tully { background-position:-152px -54px; }
-.tully:hover { background-position:-152px 0px; }
+.tully { background-position:-153.5px -54px; }
+.tully:hover { background-position:-153.5px 0px; }
 
-.greyjoy { background-position:-202px -54px; }
-.greyjoy:hover { background-position:-202px 0px; }
+.greyjoy { background-position:-204px -54px; }
+.greyjoy:hover { background-position:-204px 0px; }
 
-.arryn { background-position:-253px -54px; }
-.arryn:hover { background-position:-253px 0px; }
+.arryn { background-position:-254.5px -54px; }
+.arryn:hover { background-position:-254.5px 0px; }
+
+.targeryen { background-position: -305px -54.5px; }
+.targeryen:hover { background-position: -305px 0px; }
+
+.frey { background-position: -357px -54.5px; }
+.frey:hover { background-position: -357px 0px; }
+
+.tyrell { background-position: -409px -54.5px; }
+.tyrell:hover { background-position: -409px 0px;}
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
@@ -103,7 +120,7 @@ main {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
-
+  text-align: center;
   display: none;
   /* eventually we'll hide it by default
   display: none;
@@ -112,6 +129,7 @@ main {
 
 .show-lightbox {
   display: block;
+  height: 200vh;
 }
 .close-button {
 	color: white;
@@ -122,18 +140,37 @@ main {
 	padding-top: 20px;
 	cursor: pointer;
 }
-
-
 video {
 	width: 80%;
 	margin-top: 10%;
+  margin-left: 5%;
 	border: thin solid #949393;
+  cursor: pointer;
 }
 
 .house-info {
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: white;
   line-height: 1.5;
   width: 75%;
   margin: 1.5em auto 0;
+}
+#timeBar {
+  width: 40%;
+}
+.vid-controls {
+
+  background: linear-gradient(90deg, rgba(93,93,93,1) 0%, rgba(190,190,190,1) 100%);
+  width: 79.5%;
+  margin-left: 10%;
+  padding: 10px 5px;
+}
+button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+button:hover {
+  background-color: #94bbe9;
+
 }
